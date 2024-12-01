@@ -1,169 +1,253 @@
+// Reset styles
 * {
-    margin:  0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+// Variables
+$primary-color: #F89A1C;
+$secondary-color: #5B5B5B;
+$text-color: #333;
+$font-family: 'Arial', sans-serif;
+
+// Global styles
 body {
-    font-size: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    margin: 0;
+  font-family: $font-family, Arial, sans-serif; /* Papildyta su atsargine šeima */
+  font-size: 16px; /* Pagrindinis šrifto dydis */
+  line-height: 1.6; /* Optimalus tarpas tarp eilučių */
+  color: $text-color; /* Teksto spalva (naudojama iš kintamojo) */
+  background-color: #ffffff; /* Nustatomas baltas fonas */
+  margin: 0 auto; /* Pašalinamos numatytos naršyklės parastes */
+  padding: 20px 100px; /* Pašalinamas vidinis tarpas */
+  box-sizing: border-box; /* Užtikrina, kad parastes ir padding įtraukiami į elemento dydį */
 }
 
-/* Header */
-header {
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    padding: 1rem 2rem;
+// Universal heading styles
+h1, h2, h3 {
+  margin: 0;
+}
+
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  .nav-links {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 1.5rem;
 
-    .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #27ae60;
-    }
+    li a {
+      text-decoration: none;
+      color: $text-color;
+      font-weight: 500;
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
+      &:hover {
+        color: $primary-color;
+      }
     }
+  }
 
-    nav a {
-        text-decoration: none;
-        color: #333;
-        font-size: 1rem;
-        font-weight: 500;
+  .nav-icons {
+    display: flex;
+    gap: 1rem;
+
+    .icon {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+      }
     }
+  }
 }
 
-/* Hero Section */
-
+// Hero Section
 .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(to right, #ffefba, #ffffff);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .hero-content {
+    flex: 1;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+
+      .highlight {
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+
+    .cta-btn {
+      padding: 0.8rem 1.5rem;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ff5722;
+      }
+    }
+  }
+
+  .hero-image {
+    text-align: right; /* Lygiuoja paveikslėlį į dešinę */
+    padding-right: 50px; /* Nustato atstumą nuo dešinio krašto */
+  }
+  
+  .hero-image img {
+    height: 800px;
+    width: auto;
+    margin-right: -130px;
+  }
+}
+// Testimonials
+.testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
+.testimonial {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  position: relative;
 
-.hero p {
+  .stars {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    color: #ffc107;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-text {
+    font-style: italic;
+    color: $secondary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    .author-photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ffc107;
+    }
+
+    .author-name {
+      font-weight: bold;
+      color: $text-color;
+    }
+
+    .like-button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: #aaa;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #ff0000;
+      }
+    }
+  }
 }
 
-.hero .explore-btn {
-    background-color: #27ae60;
+// Filters Section
+.filters-section {
+  margin: 2rem 0;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    select,
+    button {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ff5722;
+      }
+    }
+  }
+}
+
+// About Us Section
+.about-us {
+  text-align: center;
+  padding: 2rem;
+  background: #fff9e6;
+
+  .learn-more-btn {
+    margin-top: 1rem;
+    background-color: $primary-color;
     color: #fff;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
 
-/* Features Recipes */
-.featured-recipes {
-    padding: 2rem;
-    background: #fff;
-
-    h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-.recipes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-
-    .recipe-card {
-        background: #f8f8f8;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-
-        img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        h3 {
-            margin: 1rem 0 0.5rem;
-        }
-
-        p {
-            font-size: 0.9rem;
-            color: #555;
-        }
+    &:hover {
+      background-color: #ff5722;
     }
   }
 }
 
-/* About Us Section */
-.about-us {
-    text-align: center;
-    padding: 2rem;
-    background: #fff9e6;
-
-    .learn-more-btn {
-        margin-top: 1rem;
-        background-color: #ff9800;
-        color: #fff;
-        padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-}
-
-/* Footer */
+// Footer
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
-
-/* filtravimas */
-
-.fiters-section {
-    margin: 2rem 0;
-    text-align: center;
-
-    h2 {
-        margin-bottom: 1rem;
-    }
-    .filters {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-
-        select, button {
-            padding: 0.5rem;
-            font-size: 1rem;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-        
-        button {
-            background-color: #ff7043;
-            color: white;
-            border: none;
-            cursor: pointer;
-
-            &:hover {
-                background-color: #ff5722;
-            }
-
-        }
-    }
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
