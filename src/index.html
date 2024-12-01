@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptai</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Recipedia</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <div class="search-icon">
+                <button>🔍</button>
+            </div>
+        </nav>
+    </header>
+
+<main>
+    <!--Hero Section-->
+    <section class="hero">
+        <h1>Cooking Made Fun and Easy: Unleash Your Inner Chef</h1>
+        <p>Discover more that 10,000 recipes in your hand with the best recipe. Help you to find the easiest way to cook.</p>
+        <button class="explore-btn">Explore Recipes</button>
+    </section>
+
+    <!--Paieska-->
+    <section class="search-section">
+        <h2>Search for a Meal</h2>
+        <input type="text" id="search-input" placeholder="Enter meal name..." />
+        <button id="search-button">Search</button>
+    </section>
+
+    <!--Filtrai-->
+    <section class="filters-section">
+        <h2>Filter Recipes</h2>
+        <div class="filters">
+            <select id="category-filter">
+                <option value="">Select Category</option>
+            </select>
+            <select id="ingredient-filter">
+                <option value="">Select Ingredient</option>
+            </select>
+            <select id="area-filter">
+                <option value="">Select Region</option>
+            </select>
+            <button id="filter-button">Filter</button>
+        </div>
+    </section>
+    <!--Featured Recipes-->
+    <section class="featured-recipes">
+        <h2>Discover, Create, Share</h2>
+        <div class="recipes-grid">
+            <div class="recipe-card">
+                <img alt="Creamy Salad">
+                <h3>Creamy Salad</h3>
+                <p>10 Mins | Easy</p>
+            </div>
+            <div class="recipe-card">
+                <img alt="Tofu Tomatoes Soup">
+                <h3>Tofu Tomatoes Soup</h3>
+                <p>15 Mins | Easy</p>
+            </div>
+            <!--Add more cards as per desing-->
+        </div>
+    </section>
+
+    <!-- Recipe Details Section -->
+    <section id="meal-details" class="hidden">
+        <button id="close-details">Close</button>
+        <div class="meal-content">
+            <h2 id="meal-title"></h2>
+            <img id="meal-image" alt="Meal Image" />
+            <p id="meal-instructions"></p>
+            <ul id="meal-ingredients"></ul>
+        </div>
+    </section>
+    
+    <!-- About Us -->
+     <section class="about-us">
+        <h2>About Us</h2>
+        <p>Our recipes are the heart and soul of our culinary community, providing you with memorable and delightful dining experiences.</p>
+        <button class="learn-more-btn">Learn More</button>
+     </section>
+</main>
+<footer>
+    <p>© 2024 Recipedia. All rights reserved.</p>
+</footer>
+</body>
+</html>
