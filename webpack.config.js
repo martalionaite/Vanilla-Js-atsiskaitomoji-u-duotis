@@ -3,15 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './src/main.js', // Pagrindinis JS failas
+  entry: './src/main.js',
   output: {
-    filename: 'bundle.js', // Sugeneruotas JS failas
-    path: path.resolve(__dirname, 'dist'), // Išvesties katalogas
-    clean: true, // Išvalo senus failus iš dist
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   module: {
     rules: [
-      // SCSS failų apdorojimas
       {
         test: /\.scss$/,
         use: [
@@ -20,12 +19,11 @@ module.exports = {
           'sass-loader',
         ],
       },
-      // Paveikslėlių apdorojimas
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
-        type: 'asset/resource', // Paveikslėliai perkeliami į dist katalogą
+        type: 'asset/resource',
         generator: {
-          filename: 'assets/[name][hash][ext]', // Sugeneruotų failų pavadinimų formatas
+          filename: 'images/[name][hash][ext]',
         },
       },
     ],
@@ -38,5 +36,10 @@ module.exports = {
       filename: 'styles/[name].[contenthash].css',
     }),
   ],
-  mode: 'development', // Arba 'production'
+  devServer: {
+    static: './dist', // Nurodome katalogą, kurį aptarnaus serveris
+    port: 8082, // Pakeiskite prievadą, jei reikia
+    open: true, // Automatiškai atidaro naršyklę
+  },
+  mode: 'development',
 };

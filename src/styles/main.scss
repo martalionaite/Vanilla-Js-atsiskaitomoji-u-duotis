@@ -75,9 +75,10 @@ h1, h2, h3 {
 
 // Hero Section
 .hero {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 2rem;
 
   .hero-content {
     flex: 1;
@@ -113,62 +114,75 @@ h1, h2, h3 {
   }
 
   .hero-image {
-    text-align: right; /* Lygiuoja paveikslėlį į dešinę */
-    padding-right: 50px; /* Nustato atstumą nuo dešinio krašto */
+    position: relative;
+    flex: 1;
+    text-align: center;
   }
   
   .hero-image img {
-    height: 800px;
-    width: auto;
-    margin-right: -130px;
+    max-width: 100%;
+    border-radius: 15px;
+    display: block;
   }
 }
-// Testimonials
+
 .testimonials {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1rem;
 }
 
 .testimonial {
-  background: #fff;
+  background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  width: 280px;
-  text-align: center;
+  padding: 1rem;
+  width: 227px;
+  text-align: left;
   position: relative;
 
-  .stars {
-    font-size: 1.2rem;
-    color: #ffc107;
-    margin-bottom: 1rem;
+  &.sarah {
+    transform: translateX(-85px) translateY(-20px); /* Pakelta lentelė */
   }
 
-  .testimonial-text {
-    font-style: italic;
-    color: $secondary-color;
-    margin-bottom: 1.5rem;
+  &.farellin {
+    transform: translateY(-130px); /* Normalus lygis */
+  }
+
+.stars {
+    font-size: 1.2rem;
+    color: #ffc107;
+    background-color: #F1F3F7;
+  }
+  .review {
+    background-color: #F1F3F7;
   }
 
   .author {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    justify-content: left;
+    gap: 1rem;
+    padding-top: 15px;
 
     .author-photo {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       object-fit: cover;
+      display: block;
+      margin: 0;
       border: 2px solid #ffc107;
     }
 
     .author-name {
+      font-size: 1rem;
       font-weight: bold;
+      line-height: 1;
       color: $text-color;
     }
 
