@@ -153,6 +153,30 @@ h1, h2, h3 {
     transform: translateY(-130px); /* Normalus lygis */
   }
 
+.author-photo-container1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-photo { order: 1; }
+.author-name { order: 2; }
+.like-button { order: 3; }
+
+.author-photo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-photo { order: 1; }
+.author-name { order: 2; }
+.like-button { order: 3; }
+
+.author-photo { order: 1; }
+.author-name { order: 2; }
+.like-button { order: 3; }
+
 .stars {
     font-size: 1.2rem;
     color: #ffc107;
@@ -257,11 +281,459 @@ h1, h2, h3 {
   }
 }
 
-// Footer
-footer {
-  background: #333;
-  color: #fff;
+
+// Featured Recipes Section //
+.featured-recipes {
+  padding: 2rem;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+
+  .featured-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .see-all-btn {
+      background-color: #f89a1c;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #d47f17;
+      }
+    }
+  }
+
+  .recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+
+    .recipe-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid #f5f5f5;
+      }
+
+      .recipe-details {
+        padding: 1rem;
+        text-align: left;
+
+        .recipe-meta {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5rem;
+          font-size: 0.9rem;
+          color: #4caf50;
+        }
+
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .view-recipe {
+          color: #f89a1c;
+          font-weight: bold;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// About Us
+.about-us-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0rem;
+  background-color: #fdfdfd;
+  gap: 2rem;
+
+  // "About Us" Tekstas
+  .about-us-content {
+    position: absolute;
+    max-width: 500px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translatex(153%); /* Koreguojame vertikalų išdėstymą */
+
+    h2 {
+      font-size: 2rem;
+      color: black;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .emoji {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .learn-more-btn {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #e68900;
+      }
+    }
+  }
+
+  // Vaizdo pusė
+  .about-us-image {
+    flex: 1;
+    position: relative;
+    max-width: 600px;
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .quick-recipes {
+      position: absolute;
+      bottom: 15%;
+      left: 10%;
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px; /* Lentelės plotis */
+      height: 100px; /* Lentelės aukštis */
+      transform: translateX(180px) translateY(170px); /* Pakelta lentelė */
+      color: greenyellow;
+
+      span {
+        display: block;
+        font-size: 1.2rem;
+        color: #046E1B;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #046E1B;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+//Community
+.community-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(379px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .community-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    .card-header {
+      display: flex; /* Aktyvuojame Flexbox */
+      align-items: center; /* Vertikalus elementų centravimas */
+      justify-content: flex-start; /* Horizontalus lygiavimas į kairę */
+      gap: 1rem; /* Tarpas tarp nuotraukos ir teksto */
+    
+      .author-photo {
+        order: 1; /* Nuotrauka bus pirmas elementas */
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ddd;
+        margin: 0; /* Pašalintas automatinis centravimas */
+      }
+    
+      .user-info {
+        order: 2; /* Tekstas bus antras elementas */
+        text-align: left; /* Užtikrina, kad tekstas bus išlygiuotas į kairę */
+    
+        .recipe-title {
+          font-size: 1.2rem;
+          margin: 0;
+          color: #333;
+          font-weight: bold;
+        }
+    
+        .user-name {
+          font-size: 0.9rem;
+          color: #555;
+        }
+      }
+    }
+    
+
+    .card-body {
+      .recipe-image {
+        width: 100%;
+        height: auto;
+        border-radius: 12px; /* Užapvalinti maisto nuotraukų kampai */
+        object-fit: cover;
+        display: block;
+      }
+
+      .stars {
+        color: #ff9800;
+        margin-bottom: 0.5rem;
+        text-align: left;
+      }
+
+      .recipe-review {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+        text-align: left;
+      }
+
+      .recipe-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+
+      .likes {
+        font-size: 0.9rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .share {
+        font-size: 0.9rem;
+        color: #007BFF;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Footer
+.download-section {
+  background-color: #2d8534; // Žalias fonas
+  color: #fff;
+  padding: 4rem 2rem;
+
+  .download-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .download-content {
+      flex: 1;
+
+      h2 {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .store-buttons {
+        display: flex;
+        gap: 1rem;
+
+        .store-button {
+          display: inline-block;
+
+          img {
+            max-width: 150px;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .download-images {
+      flex: 1;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      background: none; /* Pašalina bet kokį CSS nustatytą foną */
+      border: none; /* Pašalina galimus rėmelius */
+
+      .phone {
+        max-width: 150px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .footer-logo {
+      flex: 1;
+
+      h3 {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+
+        img {
+          max-width: 30px;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .footer-columns {
+      flex: 2;
+      display: flex;
+      gap: 2rem;
+
+      .footer-column {
+        h4 {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+          font-weight: bold;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin-bottom: 0.5rem;
+
+            a {
+              color: #333;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .newsletter {
+      flex: 1;
+
+      h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        input {
+          flex: 1;
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        button {
+          padding: 0.5rem 1rem;
+          background-color: #f7931e;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #e68314;
+          }
+        }
+      }
+    }
+  }
 }

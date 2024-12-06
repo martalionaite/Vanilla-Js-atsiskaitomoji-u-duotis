@@ -19,12 +19,16 @@
         <li><a href="#">About Us</a></li>
       </ul>
       <div class="nav-icons">
-        <button class="icon search-icon" aria-label="Search">🔍</button>
-        <button class="icon profile-icon" aria-label="Profile">👤</button>
+            <!-- Search Section -->
+    <section class="search-section">
+      <h2>Search for a Meal</h2>
+      <input type="text" id="search-input" placeholder="Enter meal name..." />
+      <button id="search-button" aria-label="Search for meals">🔍</button>
+      <button class="icon profile-icon" aria-label="Profile">👤</button>
+    </section>
       </div>
     </nav>
   </header>
-
 <section class="hero">
   <div class="hero-content">
     <h1>Cooking Made Fun and Easy: Unleash Your Inner Chef</h1>
@@ -37,8 +41,7 @@
       <div class="testimonial sarah">
         <div class="stars">★★★★★</div>
         <p class="review">"The recipes here are not only delicious but also easy to follow.”</p>
-        <div class="author">
-          <img src="images/sarah.jpg" alt="Sarah M." class="author-photo">
+        <div class="author-photo-container">
           <span class="author-name">Sarah M.</span>
           <button class="like-button" aria-label="Like">♡</button>
         </div>
@@ -46,8 +49,7 @@
       <div class="testimonial farellin">
         <div class="stars">★★★★★</div>
         <p class="review">"I’ve discovered a treasure trove of meatless recipes that have made my meals.”</p>
-        <div class="author">
-          <img src="images/farellin.jpg" alt="Farellin J." class="author-photo">
+        <div class="author-photo-container1">
           <span class="author-name">Farellin J.</span>
           <button class="like-button" aria-label="Like">♡</button>
         </div>
@@ -55,13 +57,7 @@
     </div>
   </div>
 </section>
-    <!-- Search Section -->
-    <section class="search-section">
-      <h2>Search for a Meal</h2>
-      <input type="text" id="search-input" placeholder="Enter meal name..." />
-      <button id="search-button" aria-label="Search for meals">Search</button>
-    </section>
-
+<main>
     <!-- Filters Section -->
     <section class="filters-section">
       <h2>Filter Recipes</h2>
@@ -78,27 +74,250 @@
         <button id="filter-button" aria-label="Filter meals">Filter</button>
       </div>
     </section>
-
     <!-- Featured Recipes Section -->
     <section class="featured-recipes">
-      <h2>Discover, Create, Share</h2>
+      <div class="featured-header">
+        <h2>Discover, Create, Share</h2>
+        <p>Check our most popular recipes of this week</p>
+        <button class="see-all-btn">See All</button>
+      </div>
       <div class="recipes-grid">
         <div class="recipe-card">
-          <img id="salad-img" alt="Creamy Salad" src="images/salad.jpg">
-          <h3>Creamy Salad</h3>
-          <p>10 Mins | Easy</p>
+          <div class="recipe-details">
+            <div class="recipe-meta">
+              <span>10 Mins</span>
+              <span>2 Serving</span>
+              <span>Easy</span>
+            </div>
+            <h3>Creamy Salad</h3>
+            <a href="#" class="view-recipe">View Recipe</a>
+          </div>
         </div>
         <div class="recipe-card">
-          <img id="soup-img" alt="Tofu Tomatoes Soup" src="images/soup.jpg">
-          <h3>Tofu Tomatoes Soup</h3>
-          <p>15 Mins | Easy</p>
+          <div class="recipe-details">
+            <div class="recipe-meta">
+              <span>15 Mins</span>
+              <span>3 Serving</span>
+              <span>Easy</span>
+            </div>
+            <h3>Tofu Tomatoes Soup</h3>
+            <a href="#" class="view-recipe">View Recipe</a>
+          </div>
+        </div>
+        <div class="recipe-card">
+          <div class="recipe-details">
+            <div class="recipe-meta">
+              <span>10 Mins</span>
+              <span>2 Serving</span>
+              <span>Easy</span>
+            </div>
+            <h3>Crunchy Potatoes</h3>
+            <a href="#" class="view-recipe">View Recipe</a>
+          </div>
+        </div>
+        <div class="recipe-card">
+          <div class="recipe-details">
+            <h3>Mushroom Soup</h3>
+            <a href="#" class="view-recipe">View Recipe</a>
+            <div class="recipe-meta">
+              <span>25 Mins</span>
+              <span>2 Serving</span>
+              <span>Medium</span>
+            </div>
+          </div>
+        </div>
+        <div class="recipe-card">
+          <div class="recipe-details">
+            <div class="recipe-meta">
+              <span>30 Mins</span>
+              <span>1 Serving</span>
+              <span>Easy</span>
+            </div>
+            <h3>Raspberry Pancake</h3>
+            <a href="#" class="view-recipe">View Recipe</a>
+          </div>
+        </div>
+        <div class="recipe-card">
+          <div class="recipe-details">
+            <div class="recipe-meta">
+              <span>20 Mins</span>
+              <span>1 Serving</span>
+              <span>Medium</span>
+            </div>
+            <h3>Beef Teriyaki</h3>
+            <a href="#" class="view-recipe">View Recipe</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
+<!-- About Us-->
+<section class="about-us-section">
+  <div class="about-us-content">
+    <h2>About Us <span class="emoji">🍞</span></h2>
+    <p>
+      Our recipes are the heart and soul of our culinary community, and they reflect our commitment to providing you with memorable and delightful dining experiences.
+    </p>
+    <button class="learn-more-btn">Learn More</button>
+  </div>
+  <div class="about-us-image">
+    <div class="quick-recipes">
+      <span>50+ Quick Food Recipes</span>
+      <p>That Easy To Do!</p>
+    </div>
+  </div>
+</section>
+<!--Community-->
+<section class="community-section">
+  <h2 class="section-title">From Our Community</h2>
+  <div class="community-grid">
+    <!-- Card 1 -->
+    <div class="community-card">
+      <div class="card-header profile-1">
+        <div class="user-info">
+          <h3 class="recipe-title">Spaghetti Bolognese</h3>
+          <p class="user-name">Lady Rudy</p>
+        </div>
+      </div>
+      <div class="card-body card-body-1">
+        <div class="stars">★★★★★</div>
+        <p class="recipe-review">
+          I have to say, your Spaghetti Bolognese recipe is nothing short of amazing! I've always been a fan of Italian cuisine, but I was a bit intimidated by the idea of making this classic at home.
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="likes">
+          <span>2</span> 👍
+        </div>
+        <div class="share">Share</div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="community-card">
+      <div class="card-header profile-2">
+        <div class="user-info">
+          <h3 class="recipe-title">Roasted Chicken</h3>
+          <p class="user-name">Emily Rose</p>
+        </div>
+      </div>
+      <div class="card-body card-body-2">
+        <div class="stars">★★★★★</div>
+        <p class="recipe-review">
+          I've always been a bit hesitant to roast a whole chicken, fearing it might be too complicated, but your recipe changed that for me. The instructions were so clear and easy to follow.
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="likes">
+          <span>5</span> 👍
+        </div>
+        <div class="share">Share</div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="community-card">
+      <div class="card-header profile-3">
+        <div class="user-info">
+          <h3 class="recipe-title">Vegetable Pot Pie</h3>
+          <p class="user-name">Susan H</p>
+        </div>
+      </div>
+      <div class="card-body card-body-3">
+        <div class="stars">★★★★★</div>
+        <p class="recipe-review">
+          I've always been a fan of hearty comfort food, and the 'Ultimate Vegetable Pot Pie' recipe on this platform completely exceeded my expectations.
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="likes">
+          <span>3</span> 👍
+        </div>
+        <div class="share">Share</div>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="community-card">
+      <div class="card-header profile-4">
+        <div class="user-info">
+          <h3 class="recipe-title">Fresh Garden Salad</h3>
+          <p class="user-name">Lilac Laura</p>
+        </div>
+      </div>
+      <div class="card-body card-body-4">
+        <div class="stars">★★★★★</div>
+        <p class="recipe-review">
+          I've always considered myself a salad enthusiast, and this salad recipe is nothing short of a culinary masterpiece and has taken my love for greens to a whole new level.
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="likes">
+          <span>1</span> 👍
+        </div>
+        <div class="share">Share</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="download-section">
+  <div class="download-container">
+    <div class="download-content">
+      <h2>Embrace the joy of cooking with get it on your iPhone or Android</h2>
+      <p>Your kitchen adventure begins now!</p>
+      <div class="store-buttons">
+        <a href="#" class="store-button app-store"> 
+        </a>
+        <a href="#" class="store-button google-play"> 
+        </a>
+      </div>
+    </div>
+    <div class="download-images">
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h3> Recipedia</h3>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Recipe</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Breakfast</a></li>
+          <li><a href="#">Lunch</a></li>
+          <li><a href="#">Dinner</a></li>
+          <li><a href="#">Dessert</a></li>
+          <li><a href="#">Drink</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="newsletter">
+      <h4>Sign up for our newsletter</h4>
+      <form>
+        <input type="email" placeholder="Your Email Address" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</footer>
 
-  <footer>
-    <p>© 2024 Recipedia. All rights reserved.</p>
-  </footer>
 </body>
 </html>
